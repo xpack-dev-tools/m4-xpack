@@ -42,23 +42,23 @@
       "platforms": {
         "darwin-arm64": {
           "fileName": "xpack-m4-1.4.19-1-darwin-arm64.tar.gz",
-          "sha256": "a891fe75298e141b85fd2a8d8351b13fddc0fc44ce80ecd4a938f5e35c4d6ffa"
+          "sha256": "356876be46079cc5768f0144210170bd9991f6651fbba930983fb160f92047e1"
         },
         "darwin-x64": {
           "fileName": "xpack-m4-1.4.19-1-darwin-x64.tar.gz",
-          "sha256": "8c5adeb15ade882fd638f237e3049b3cc2065661a37b575a930b6efebb77cab7"
+          "sha256": "31162614d87b873953590d68e51a7112e205edc11fbba1ee4b6fca296ff8da7d"
         },
         "linux-arm64": {
           "fileName": "xpack-m4-1.4.19-1-linux-arm64.tar.gz",
-          "sha256": "c48ad71f26d9cdc7d09715f58f24c69bda61edf65d4d899f33a4e5b3a081b5a3"
+          "sha256": "e51ec78b5c28d30cfcaec166a63f5f510c7aed361c04662a1462afd70b6fbcf8"
         },
         "linux-arm": {
           "fileName": "xpack-m4-1.4.19-1-linux-arm.tar.gz",
-          "sha256": "acdbe87fd262803862e9c3dfcd422604bb54d13731d88f631c136ed8e1c96c1f"
+          "sha256": "88869ac3668ba24c82375fd027629e31fb045cc1c3d801d195d5e1947590910f"
         },
         "linux-x64": {
           "fileName": "xpack-m4-1.4.19-1-linux-x64.tar.gz",
-          "sha256": "514401d89f5c256153a2138668d5ad7a6aea67e6dac27e141a95f2440007b530"
+          "sha256": "9f327c07506c5f620af13dd5009738560cb443feeabeac362947946b1f241d3d"
         },
         "win32-x64": {
           "fileName": "xpack-m4-1.4.19-1-win32-x64.zip",
@@ -67,7 +67,8 @@
       }
     },
     "bin": {
-      "gm4": "./.content/bin/gm4"
+      "gm4": "./.content/bin/gm4",
+      "m4": "./.content/bin/m4"
     },
     "devDependencies": {
       "@xpack-dev-tools/xbb-helper": "^0.10.0"
