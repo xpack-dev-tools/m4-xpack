@@ -70,7 +70,7 @@
       "gm4": "./.content/bin/gm4"
     },
     "devDependencies": {
-      "@xpack-dev-tools/xbb-helper": "^0.9.6"
+      "@xpack-dev-tools/xbb-helper": "^0.10.0"
     },
     "properties": {
       "appName": "GNU M4",
