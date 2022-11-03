@@ -195,7 +195,7 @@ Run the native build:
 caffeinate xpm run build-develop --config darwin-x64 -C ~/Work/m4-xpack.git
 ```
 
-The build takes about 22 minutes.
+The build takes a few minutes.
 
 When functional, push the `xpack-develop` branch to GitHub.
 
@@ -214,12 +214,10 @@ archive and its SHA signature, created in the `deploy` folder:
 
 ```console
 $ ls -l ~/Work/m4-xpack.git/build/darwin-x64/deploy
-total 1080
--rw-r--r--  1 ilg  staff  547972 May 17 09:50 xpack-m4-1.4.19-1-darwin-x64.tar.gz
--rw-r--r--  1 ilg  staff     111 May 17 09:50 xpack-m4-1.4.19-1-darwin-x64.tar.gz.sha
+total 2024
+-rw-r--r--  1 ilg  staff  1031875 Nov  3 11:11 xpack-m4-1.4.19-1-darwin-x64.tar.gz
+-rw-r--r--  1 ilg  staff      102 Nov  3 11:11 xpack-m4-1.4.19-1-darwin-x64.tar.gz.sha
 ```
-
-#### Apple Silicon macOS
 
 #### Apple Silicon macOS
 
@@ -281,9 +279,9 @@ archive and its SHA signature, created in the `deploy` folder:
 
 ```console
 $ ls -l ~/Work/m4-xpack.git/build/darwin-arm64/deploy
-total 1056
--rw-r--r--  1 ilg  staff  533014 May 17 09:49 xpack-m4-1.4.19-1-darwin-arm64.tar.gz
--rw-r--r--  1 ilg  staff     113 May 17 09:49 xpack-m4-1.4.19-1-darwin-arm64.tar.gz.sha
+total 2008
+-rw-r--r--  1 ilg  staff  1021918 Nov  3 11:16 xpack-m4-1.4.19-1-darwin-arm64.tar.gz
+-rw-r--r--  1 ilg  staff      104 Nov  3 11:16 xpack-m4-1.4.19-1-darwin-arm64.tar.gz.sha
 ```
 
 #### Intel GNU/Linux
@@ -333,9 +331,9 @@ archive and its SHA signature, created in the `deploy` folder:
 
 ```console
 $ ls -l ~/Work/m4-xpack.git/build/linux-x64/deploy
-total 1480
--rw-rw-rw- 1 ilg ilg 551495 May 17 09:49 xpack-m4-1.4.19-1-linux-x64.tar.gz
--rw-rw-rw- 1 ilg ilg    110 May 17 09:49 xpack-m4-1.4.19-1-linux-x64.tar.gz.sha
+total 1020
+-rw-r--r-- 1 ilg ilg 1038341 Nov  3 09:27 xpack-m4-1.4.19-1-linux-x64.tar.gz
+-rw-r--r-- 1 ilg ilg     101 Nov  3 09:27 xpack-m4-1.4.19-1-linux-x64.tar.gz.sha
 ```
 
 ##### Build the Windows binaries
@@ -392,9 +390,9 @@ archive and its SHA signature, created in the `deploy` folder:
 
 ```console
 $ ls -l ~/Work/m4-xpack.git/build/linux-arm64/deploy
-total 532
--rw-rw-rw- 1 ilg ilg 538649 May 17 09:51 xpack-m4-1.4.19-1-linux-arm64.tar.gz
--rw-rw-rw- 1 ilg ilg    112 May 17 09:51 xpack-m4-1.4.19-1-linux-arm64.tar.gz.sha
+total 1016
+-rw-r--r-- 1 ilg ilg 1033342 Nov  3 09:40 xpack-m4-1.4.19-1-linux-arm64.tar.gz
+-rw-r--r-- 1 ilg ilg     103 Nov  3 09:40 xpack-m4-1.4.19-1-linux-arm64.tar.gz.sha
 ```
 
 #### Arm GNU/Linux 32-bit
@@ -447,9 +445,9 @@ archive and its SHA signature, created in the `deploy` folder:
 
 ```console
 $ ls -l ~/Work/m4-xpack.git/build/linux-arm/deploy
-total 500
--rw-rw-rw- 1 ilg ilg 506541 May 17 09:51 xpack-m4-1.4.19-1-linux-arm.tar.gz
--rw-rw-rw- 1 ilg ilg    110 May 17 09:51 xpack-m4-1.4.19-1-linux-arm.tar.gz.sha
+total 992
+-rw-r--r-- 1 ilg ilg 1010670 Nov  3 09:41 xpack-m4-1.4.19-1-linux-arm.tar.gz
+-rw-r--r-- 1 ilg ilg     101 Nov  3 09:41 xpack-m4-1.4.19-1-linux-arm.tar.gz.sha
 ```
 
 ### Files cache
