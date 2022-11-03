@@ -7,8 +7,8 @@ summary: "Version **{{ XBB_RELEASE_VERSION }}** is a maintenance release; it fix
 
 summary: "Version **{{ XBB_RELEASE_VERSION }}** is a new release; it follows the upstream release."
 
-m4_version: 1.4.19
-m4_date: 2021-05-28
+m4_version: "1.4.19"
+m4_date: "2021-05-28"
 version: "{{ XBB_RELEASE_VERSION }}"
 npm_subversion: 1
 download_url: https://github.com/xpack-dev-tools/m4-xpack/releases/tag/v{{ XBB_RELEASE_VERSION }}/
@@ -24,7 +24,6 @@ categories:
 tags:
   - releases
   - m4
-  - readlink
 
 ---
 
