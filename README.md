@@ -100,8 +100,8 @@ After install, the package should create a structure like this (macOS files;
 only the first two depth levels are shown):
 
 ```console
-$ tree -L 2 xpacks/xpack-dev-tools-m4/.content/
-xpacks/xpack-dev-tools-m4/.content/
+$ tree -L 2 /Users/ilg/Library/xPacks/\@xpack-dev-tools/m4/1.4.19-1.1/.content/
+/Users/ilg/Library/xPacks/\@xpack-dev-tools/m4/1.4.19-1.1/.content/
 ├── README.md
 ├── bin
 │   ├── gm4 -> m4
@@ -174,7 +174,7 @@ For maintainer info, please see the
 
 ## Support
 
-The quick answer is to use the GitHub
+The quick advice for getting support is to use the GitHub
 [Discussions](https://github.com/xpack-dev-tools/m4-xpack/discussions/).
 
 For more details please read the

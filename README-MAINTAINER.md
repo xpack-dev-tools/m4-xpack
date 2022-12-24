@@ -4,7 +4,7 @@
 
 # Maintainer info
 
-## Project repository
+## Get project sources
 
 The project is hosted on GitHub:
 
@@ -14,7 +14,7 @@ To clone the stable branch (`xpack`), run the following commands in a
 terminal (on Windows use the _Git Bash_ console):
 
 ```sh
-rm -rf ~/Work/m4-xpack.git; \
+rm -rf ~/Work/m4-xpack.git && \
 git clone https://github.com/xpack-dev-tools/m4-xpack.git \
   ~/Work/m4-xpack.git
 ```
@@ -22,31 +22,38 @@ git clone https://github.com/xpack-dev-tools/m4-xpack.git \
 For development purposes, clone the `xpack-develop` branch:
 
 ```sh
-rm -rf ~/Work/m4-xpack.git; \
-mkdir -p ~/Work; \
+rm -rf ~/Work/m4-xpack.git && \
+mkdir -p ~/Work && \
 git clone \
   --branch xpack-develop \
   https://github.com/xpack-dev-tools/m4-xpack.git \
   ~/Work/m4-xpack.git
 ```
 
-Same for the helper and link it to the central xPacks store:
-
-```sh
-rm -rf ~/Work/xbb-helper-xpack.git; \
-mkdir -p ~/Work; \
-git clone \
-  --branch xpack-develop \
-  https://github.com/xpack-dev-tools/xbb-helper-xpack.git \
-  ~/Work/xbb-helper-xpack.git; \
-xpm link -C ~/Work/xbb-helper-xpack.git
-```
-
-Or, if the repos were already cloned:
+Or, if the repo was already cloned:
 
 ```sh
 git -C ~/Work/m4-xpack.git pull
+```
 
+## Get helper sources
+
+The project has a dependency to a common **helper**; clone the
+`xpack-develop` branch and link it to the central xPacks store:
+
+```sh
+rm -rf ~/Work/xbb-helper-xpack.git && \
+mkdir -p ~/Work && \
+git clone \
+  --branch xpack-develop \
+  https://github.com/xpack-dev-tools/xbb-helper-xpack.git \
+  ~/Work/xbb-helper-xpack.git && \
+xpm link -C ~/Work/xbb-helper-xpack.git
+```
+
+Or, if the repo was already cloned:
+
+```sh
 git -C ~/Work/xbb-helper-xpack.git pull
 xpm link -C ~/Work/xbb-helper-xpack.git
 ```
@@ -142,8 +149,9 @@ Before the real build, run test builds on all platforms.
 
 #### Visual Studio Code
 
-All actions are defined as **xPack actions** and can be
-conveniently triggered via the VS Code graphical interface.
+All actions are defined as **xPack actions** and can be conveniently
+triggered via the VS Code graphical interface, using the
+[xPack extension](https://marketplace.visualstudio.com/items?itemName=ilg-vscode.xpack).
 
 #### Intel macOS
 
@@ -168,7 +176,7 @@ git -C ~/Work/xbb-helper-xpack.git pull
 Install project dependencies:
 
 ```sh
-xpm install -C ~/Work/m4-xpack.git
+xpm run install -C ~/Work/m4-xpack.git
 ```
 
 If the writable helper is used,
@@ -209,6 +217,18 @@ caffeinate ssh xbbmi
 
 Repeat the same steps as before.
 
+```sh
+git -C ~/Work/m4-xpack.git pull && \
+xpm run deep-clean -C ~/Work/m4-xpack.git && \
+xpm install -C ~/Work/m4-xpack.git && \
+git -C ~/Work/xbb-helper-xpack.git pull && \
+xpm link -C ~/Work/xbb-helper-xpack.git && \
+xpm run link-deps -C ~/Work/m4-xpack.git && \
+xpm run deep-clean --config darwin-x64  -C ~/Work/m4-xpack.git && \
+xpm install --config darwin-x64 -C ~/Work/m4-xpack.git
+caffeinate xpm run build-develop --config darwin-x64 -C ~/Work/m4-xpack.git
+```
+
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
@@ -232,45 +252,14 @@ caffeinate ssh xbbma
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/m4-xpack.git pull
-
-xpm run deep-clean -C ~/Work/m4-xpack.git
-```
-
-If the helper is also under development and needs changes,
-update it too:
-
-```sh
-git -C ~/Work/xbb-helper-xpack.git pull
-```
-
-Install project dependencies:
-
-```sh
-xpm install -C ~/Work/m4-xpack.git
-```
-
-If the writable helper is used,
-link it in the place of the read-only package:
-
-```sh
-xpm link -C ~/Work/xbb-helper-xpack.git
-
-xpm run link-deps -C ~/Work/m4-xpack.git
-```
-
-For repeated builds, clean the build folder and install de
-build configuration dependencies:
-
-```sh
-xpm run deep-clean --config darwin-arm64  -C ~/Work/m4-xpack.git
-
+git -C ~/Work/m4-xpack.git pull && \
+xpm run deep-clean -C ~/Work/m4-xpack.git && \
+xpm install -C ~/Work/m4-xpack.git && \
+git -C ~/Work/xbb-helper-xpack.git pull && \
+xpm link -C ~/Work/xbb-helper-xpack.git && \
+xpm run link-deps -C ~/Work/m4-xpack.git && \
+xpm run deep-clean --config darwin-arm64  -C ~/Work/m4-xpack.git && \
 xpm install --config darwin-arm64 -C ~/Work/m4-xpack.git
-```
-
-Run the native build:
-
-```sh
 caffeinate xpm run build-develop --config darwin-arm64 -C ~/Work/m4-xpack.git
 ```
 
@@ -298,31 +287,12 @@ caffeinate ssh xbbli
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/m4-xpack.git pull
-
-xpm run deep-clean -C ~/Work/m4-xpack.git
-```
-
-Clean the build folder and prepare the docker container:
-
-```sh
-xpm run deep-clean --config linux-x64 -C ~/Work/m4-xpack.git
-
-xpm run docker-prepare --config linux-x64 -C ~/Work/m4-xpack.git
-```
-
-If the helper is also under development and needs changes,
-link it in the place of the read-only package:
-
-```sh
-git -C ~/Work/xbb-helper-xpack.git pull
-
+git -C ~/Work/m4-xpack.git pull && \
+xpm run deep-clean -C ~/Work/m4-xpack.git && \
+xpm run deep-clean --config linux-x64 -C ~/Work/m4-xpack.git && \
+xpm run docker-prepare --config linux-x64 -C ~/Work/m4-xpack.git && \
+git -C ~/Work/xbb-helper-xpack.git pull && \
 xpm run docker-link-deps --config linux-x64 -C ~/Work/m4-xpack.git
-```
-
-Run the docker build:
-
-```sh
 xpm run docker-build-develop --config linux-x64 -C ~/Work/m4-xpack.git
 ```
 
@@ -352,36 +322,12 @@ caffeinate ssh xbbla64
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/m4-xpack.git pull
-
-xpm run deep-clean -C ~/Work/m4-xpack.git
-```
-
-If the helper is also under development and needs changes,
-update it too:
-
-```sh
-git -C ~/Work/xbb-helper-xpack.git pull
-```
-
-For repeated builds, clean the build folder and prepare the docker container:
-
-```sh
-xpm run deep-clean --config linux-arm64 -C ~/Work/m4-xpack.git
-
-xpm run docker-prepare --config linux-arm64 -C ~/Work/m4-xpack.git
-```
-
-If the writable helper is used,
-link it in the place of the read-only package:
-
-```sh
+git -C ~/Work/m4-xpack.git pull && \
+xpm run deep-clean -C ~/Work/m4-xpack.git && \
+xpm run deep-clean --config linux-arm64 -C ~/Work/m4-xpack.git && \
+xpm run docker-prepare --config linux-arm64 -C ~/Work/m4-xpack.git && \
+git -C ~/Work/xbb-helper-xpack.git pull && \
 xpm run docker-link-deps --config linux-arm64 -C ~/Work/m4-xpack.git
-```
-
-Run the docker build:
-
-```sh
 xpm run docker-build-develop --config linux-arm64 -C ~/Work/m4-xpack.git
 ```
 
@@ -407,36 +353,12 @@ caffeinate ssh xbbla32
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/m4-xpack.git pull
-
-xpm run deep-clean -C ~/Work/m4-xpack.git
-```
-
-If the helper is also under development and needs changes,
-update it too:
-
-```sh
-git -C ~/Work/xbb-helper-xpack.git pull
-```
-
-For repeated builds, clean the build folder and prepare the docker container:
-
-```sh
-xpm run deep-clean --config linux-arm -C ~/Work/m4-xpack.git
-
-xpm run docker-prepare --config linux-arm -C ~/Work/m4-xpack.git
-```
-
-If the writable helper is used,
-link it in the place of the read-only package:
-
-```sh
+git -C ~/Work/m4-xpack.git pull && \
+xpm run deep-clean -C ~/Work/m4-xpack.git && \
+xpm run deep-clean --config linux-arm -C ~/Work/m4-xpack.git && \
+xpm run docker-prepare --config linux-arm -C ~/Work/m4-xpack.git && \
+git -C ~/Work/xbb-helper-xpack.git pull && \
 xpm run docker-link-deps --config linux-arm -C ~/Work/m4-xpack.git
-```
-
-Run the docker build:
-
-```sh
 xpm run docker-build-develop --config linux-arm -C ~/Work/m4-xpack.git
 ```
 
@@ -497,7 +419,14 @@ screen -S ga
 # Ctrl-a Ctrl-d
 ```
 
-Check that both the project Git and the submodule are pushed to GitHub.
+For `xbbli` & `xbbla64` start two runners:
+
+```sh
+~/actions-runners/xpack-dev-tools/1/run.sh &
+~/actions-runners/xpack-dev-tools/2/run.sh &
+```
+
+Check that the project is pushed to GitHub.
 
 To trigger the GitHub Actions build, use the xPack action:
 
@@ -510,11 +439,11 @@ To trigger the GitHub Actions build, use the xPack action:
 This is equivalent to:
 
 ```sh
-bash ~/Work/m4-xpack.git/scripts/helper/trigger-workflow-build.sh --machine xbbli
-bash ~/Work/m4-xpack.git/scripts/helper/trigger-workflow-build.sh --machine xbbla64
-bash ~/Work/m4-xpack.git/scripts/helper/trigger-workflow-build.sh --machine xbbla32
-bash ~/Work/m4-xpack.git/scripts/helper/trigger-workflow-build.sh --machine xbbmi
-bash ~/Work/m4-xpack.git/scripts/helper/trigger-workflow-build.sh --machine xbbma
+bash ~/Work/m4-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbli
+bash ~/Work/m4-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla64
+bash ~/Work/m4-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla32
+bash ~/Work/m4-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbmi
+bash ~/Work/m4-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbma
 ```
 
 These scripts require the `GITHUB_API_DISPATCH_TOKEN` variable to be present
@@ -548,9 +477,9 @@ To trigger the GitHub Actions tests, use the xPack actions:
 These are equivalent to:
 
 ```sh
-bash ~/Work/m4-xpack.git/scripts/helper/tests/trigger-workflow-test-prime.sh
-bash ~/Work/m4-xpack.git/scripts/helper/tests/trigger-workflow-test-docker-linux-intel.sh
-bash ~/Work/m4-xpack.git/scripts/helper/tests/trigger-workflow-test-docker-linux-arm.sh
+bash ~/Work/m4-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-prime.sh
+bash ~/Work/m4-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-docker-linux-intel.sh
+bash ~/Work/m4-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-docker-linux-arm.sh
 ```
 
 These scripts require the `GITHUB_API_DISPATCH_TOKEN` variable to be present
@@ -573,7 +502,7 @@ To trigger the Travis test, use the xPack action:
 This is equivalent to:
 
 ```sh
-bash ~/Work/m4-xpack.git/scripts/helper/tests/trigger-travis-macos.sh
+bash ~/Work/m4-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-travis-macos.sh
 ```
 
 This script requires the `TRAVIS_COM_TOKEN` variable to be present
@@ -584,7 +513,23 @@ The test results are available from
 
 ### Manual tests
 
-Install the binaries on all platforms.
+To download the pre-released archive for the specific platform
+and run the tests, use:
+
+```sh
+xpm run test-pre-release
+```
+
+For even more tests, on each platform (MacOS, GNU/Linux, Windows),
+download the archive from
+[pre-releases/test](https://github.com/xpack-dev-tools/pre-releases/releases/tag/test/)
+and check the binaries.
+
+On macOS, remove the `com.apple.quarantine` flag:
+
+```sh
+xattr -dr com.apple.quarantine ${HOME}/Downloads/xpack-*
+```
 
 On GNU/Linux and macOS systems, use:
 
@@ -624,7 +569,7 @@ In the `xpack/web-jekyll` GitHub repo:
 - select the `develop` branch
 - copy the new file to `_posts/releases/m4`
 - update version and date from last
-[release](https://github.com/m4/ninja/releases/).
+[release](https://ftp.gnu.org/gnu/m4/).
 
 If any, refer to closed
 [issues](https://github.com/xpack-dev-tools/m4-xpack/issues/).
@@ -756,5 +701,5 @@ In case the previous version is not functional and needs to be unpublished:
 Run the xPack action `trigger-workflow-deep-clean`, this
 will remove the build folders on all supported platforms.
 
-The tests results are available from the
+The results are available from the
 [Actions](https://github.com/xpack-dev-tools/m4-xpack/actions/) page.
