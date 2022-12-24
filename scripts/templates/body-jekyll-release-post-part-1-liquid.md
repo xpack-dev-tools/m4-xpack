@@ -29,7 +29,7 @@ tags:
 
 [The xPack GNU M4](https://xpack.github.io/m4/)
 is a standalone cross-platform binary distribution of
-[GNU M4](http://m4.org).
+[GNU M4](https://www.gnu.org/software/m4/).
 
 There are separate binaries for
 **macOS** (Intel 64-bit, Apple Silicon 64-bit)
@@ -170,7 +170,7 @@ relative path.
 ## Documentation
 
 The original documentation is available
-[online](https://m4.org/manual.html).
+[online](https://www.gnu.org/software/m4/manual/).
 
 ## Build
 
