@@ -14,9 +14,7 @@ function tests_run_all()
 {
   local test_bin_path="$1"
 
-  (
-    test_m4 "${test_bin_path}"
-  )
+  m4_test "${test_bin_path}"
 }
 
 # -----------------------------------------------------------------------------

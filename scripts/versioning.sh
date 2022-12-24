@@ -10,7 +10,7 @@
 
 # -----------------------------------------------------------------------------
 
-function build_application_versioned_components()
+function application_build_versioned_components()
 {
   XBB_M4_VERSION="$(echo "${XBB_RELEASE_VERSION}" | sed -e 's|-.*||')"
 
@@ -21,12 +21,13 @@ function build_application_versioned_components()
     xbb_set_libraries_install "${XBB_DEPENDENCIES_INSTALL_FOLDER_PATH}"
 
     # https://ftp.gnu.org/pub/gnu/libiconv/
-    build_libiconv "1.17"
+    libiconv_build "1.17"
+
 
     xbb_set_binaries_install "${XBB_APPLICATION_INSTALL_FOLDER_PATH}"
 
     # https://ftp.gnu.org/gnu/m4/
-    build_m4 "${XBB_M4_VERSION}"
+    m4_build "${XBB_M4_VERSION}"
 
     # -------------------------------------------------------------------------
   else
