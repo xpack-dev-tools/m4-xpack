@@ -219,7 +219,6 @@ Repeat the same steps as before.
 
 ```sh
 git -C ~/Work/m4-xpack.git pull && \
-xpm run deep-clean -C ~/Work/m4-xpack.git && \
 xpm install -C ~/Work/m4-xpack.git && \
 git -C ~/Work/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xbb-helper-xpack.git && \
@@ -253,7 +252,6 @@ Update the build scripts (or clone them at the first use):
 
 ```sh
 git -C ~/Work/m4-xpack.git pull && \
-xpm run deep-clean -C ~/Work/m4-xpack.git && \
 xpm install -C ~/Work/m4-xpack.git && \
 git -C ~/Work/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xbb-helper-xpack.git && \
@@ -288,7 +286,8 @@ Update the build scripts (or clone them at the first use):
 
 ```sh
 git -C ~/Work/m4-xpack.git pull && \
-xpm run deep-clean -C ~/Work/m4-xpack.git && \
+xpm install -C ~/Work/m4-xpack.git && \
+xpm run link-deps -C ~/Work/m4-xpack.git && \
 xpm run deep-clean --config linux-x64 -C ~/Work/m4-xpack.git && \
 xpm run docker-prepare --config linux-x64 -C ~/Work/m4-xpack.git && \
 git -C ~/Work/xbb-helper-xpack.git pull && \
@@ -323,7 +322,8 @@ Update the build scripts (or clone them at the first use):
 
 ```sh
 git -C ~/Work/m4-xpack.git pull && \
-xpm run deep-clean -C ~/Work/m4-xpack.git && \
+xpm install -C ~/Work/m4-xpack.git && \
+xpm run link-deps -C ~/Work/m4-xpack.git && \
 xpm run deep-clean --config linux-arm64 -C ~/Work/m4-xpack.git && \
 xpm run docker-prepare --config linux-arm64 -C ~/Work/m4-xpack.git && \
 git -C ~/Work/xbb-helper-xpack.git pull && \
@@ -354,7 +354,8 @@ Update the build scripts (or clone them at the first use):
 
 ```sh
 git -C ~/Work/m4-xpack.git pull && \
-xpm run deep-clean -C ~/Work/m4-xpack.git && \
+xpm install -C ~/Work/m4-xpack.git && \
+xpm run link-deps -C ~/Work/m4-xpack.git && \
 xpm run deep-clean --config linux-arm -C ~/Work/m4-xpack.git && \
 xpm run docker-prepare --config linux-arm -C ~/Work/m4-xpack.git && \
 git -C ~/Work/xbb-helper-xpack.git pull && \
