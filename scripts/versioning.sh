@@ -15,7 +15,7 @@ function application_build_versioned_components()
   XBB_M4_VERSION="$(echo "${XBB_RELEASE_VERSION}" | sed -e 's|-.*||')"
 
   # Keep them in sync with combo archive content.
-  if [[ "${XBB_RELEASE_VERSION}" =~ 1\.4\.19-* ]]
+  if [[ "${XBB_RELEASE_VERSION}" =~ 1[.]4[.]19-.* ]]
   then
     # -------------------------------------------------------------------------
     # Build the native dependencies.
