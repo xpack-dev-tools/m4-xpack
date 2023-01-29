@@ -4,7 +4,10 @@ Entries in this file are in reverse chronological order.
 
 ## 2023-01-29
 
-* v1.4.19-2 prepared
+* 967f5fc package.json: bump deps
+* 24f6f58 prepare v1.4.19-2
+* 1bd99d3 re-generate workflows
+* dabe96a .vscode/settings.json: ignoreWords
 
 ## 2023-01-28
 
