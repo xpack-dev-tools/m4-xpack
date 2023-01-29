@@ -37,28 +37,28 @@
     "minimumXpmRequired": "0.14.0",
     "binaries": {
       "destination": "./.content",
-      "baseUrl": "https://github.com/xpack-dev-tools/m4-xpack/releases/download/v1.4.19-1",
+      "baseUrl": "https://github.com/xpack-dev-tools/m4-xpack/releases/download/v1.4.19-2",
       "skip": 1,
       "platforms": {
         "darwin-arm64": {
-          "fileName": "xpack-m4-1.4.19-1-darwin-arm64.tar.gz",
-          "sha256": "356876be46079cc5768f0144210170bd9991f6651fbba930983fb160f92047e1"
+          "fileName": "xpack-m4-1.4.19-2-darwin-arm64.tar.gz",
+          "sha256": "59b0a9c31d73141af330f405e4edd134f9788a3efc96ab3e33f4bcde77012769"
         },
         "darwin-x64": {
-          "fileName": "xpack-m4-1.4.19-1-darwin-x64.tar.gz",
-          "sha256": "31162614d87b873953590d68e51a7112e205edc11fbba1ee4b6fca296ff8da7d"
+          "fileName": "xpack-m4-1.4.19-2-darwin-x64.tar.gz",
+          "sha256": "72bbe3c968e235b81cf9b06d2c2dffd227440c1c479710a0574bd2ac9ea258fc"
         },
         "linux-arm64": {
-          "fileName": "xpack-m4-1.4.19-1-linux-arm64.tar.gz",
-          "sha256": "e51ec78b5c28d30cfcaec166a63f5f510c7aed361c04662a1462afd70b6fbcf8"
+          "fileName": "xpack-m4-1.4.19-2-linux-arm64.tar.gz",
+          "sha256": "a691b11a79c8eb6ef10f829b738341b560c6559f14de4738ca1a8a17b0ac84ed"
         },
         "linux-arm": {
-          "fileName": "xpack-m4-1.4.19-1-linux-arm.tar.gz",
-          "sha256": "88869ac3668ba24c82375fd027629e31fb045cc1c3d801d195d5e1947590910f"
+          "fileName": "xpack-m4-1.4.19-2-linux-arm.tar.gz",
+          "sha256": "def94610124b970243d6c82b1c187c6d121670fe4662788fcd51c93d9398cc45"
         },
         "linux-x64": {
-          "fileName": "xpack-m4-1.4.19-1-linux-x64.tar.gz",
-          "sha256": "9f327c07506c5f620af13dd5009738560cb443feeabeac362947946b1f241d3d"
+          "fileName": "xpack-m4-1.4.19-2-linux-x64.tar.gz",
+          "sha256": "b15b3521c678b2e762d1156b01b9bbe0474e8f88f044de0783b0fb1da00c4a00"
         }
       }
     },
