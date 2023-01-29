@@ -4,7 +4,14 @@ Entries in this file are in reverse chronological order.
 
 ## 2023-01-29
 
+* v1.4.19-2.1 published on npmjs.com
+* 2214e08 package.json: update urls for 1.4.19-2.1 release
+* 67a941e CHANGELOG update
 * v1.4.19-2 released
+* ea097ad CHANGELOG update
+* 84327c1 README update
+* dbb73f5 .vscode/settings.json: ignoreWords
+* 9fe9207 package.json: bump deps
 * 967f5fc package.json: bump deps
 * 24f6f58 prepare v1.4.19-2
 * 1bd99d3 re-generate workflows
