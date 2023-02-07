@@ -9,8 +9,10 @@ summary: "Version **{{ XBB_RELEASE_VERSION }}** is a new release; it follows the
 
 m4_version: "1.4.19"
 m4_date: "2021-05-28"
+
 version: "{{ XBB_RELEASE_VERSION }}"
-npm_subversion: 1
+npm_subversion: "1"
+
 download_url: https://github.com/xpack-dev-tools/m4-xpack/releases/tag/v{{ XBB_RELEASE_VERSION }}/
 
 date:   {{ RELEASE_DATE }}
@@ -58,7 +60,7 @@ The binary files are available from GitHub [Releases]({% raw %}{{ page.download_
 
 The full details of installing the **xPack GNU M4** on various platforms
 are presented in the separate
-[Install]({% raw %}{{ site.baseurl }}{% endraw %}/m4/install/) page.
+[Install]({% raw %}{{ site.baseurl }}{% endraw %}/dev-tools/m4/install/) page.
 
 ### Easy install
 
@@ -76,7 +78,7 @@ a dependency for a project is quite easy:
 cd my-project
 xpm init # Only at first use.
 
-xpm install @xpack-dev-tools/m4@latest
+xpm install @xpack-dev-tools/m4@latest --verbose
 
 ls -l xpacks/.bin
 ```
@@ -84,7 +86,7 @@ ls -l xpacks/.bin
 To install this specific version, use:
 
 ```sh
-xpm install @xpack-dev-tools/m4@{% raw %}{{ page.version }}.{{ page.npm_subversion }}{% endraw %}
+xpm install @xpack-dev-tools/m4@{% raw %}{{ page.version }}.{{ page.npm_subversion }}{% endraw %} --verbose
 ```
 
 It is also possible to install Meson Build globally, in the user home folder,
@@ -92,7 +94,7 @@ but this requires xPack aware tools to automatically identify them and
 manage paths.
 
 ```sh
-xpm install --global @xpack-dev-tools/m4@latest
+xpm install --global @xpack-dev-tools/m4@latest --verbose
 ```
 
 ### Uninstall
