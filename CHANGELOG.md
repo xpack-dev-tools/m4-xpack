@@ -4,7 +4,10 @@ Entries in this file are in reverse chronological order.
 
 ## 2023-09-06
 
-* v1.4.19-3 released
+* v1.4.19-3.1 published on npmjs.com
+* dab5b71 package.json: update urls for 1.4.19-3.1 release
+* 83fd648 README update
+* 08259f0 CHANGELOG update
 * 5e8af9a .vscode/settings.json: ignoreWords
 * eec19e6 README update
 * b78c8eb README update
