@@ -2,9 +2,18 @@
 
 Entries in this file are in reverse chronological order.
 
+## 2023-09-06
+
+* v1.4.19-3 released
+* 5e8af9a .vscode/settings.json: ignoreWords
+* eec19e6 README update
+* b78c8eb README update
+* 8e32fac package.json bump deps
+* e342f75 templates/jekyll update
+
 ## 2023-09-05
 
-* v1.4.19-3 prepared
+* ce4bfa9 prepare v1.4.19-3
 * 05f044c re-generate workflows
 * 7797269 READMEs update
 * 4b19d82 package.json: bump deps
