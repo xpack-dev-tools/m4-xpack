@@ -119,7 +119,7 @@ $ tree -L 2 /Users/ilg/Library/xPacks/\@xpack-dev-tools/m4/1.4.19-3.1/.content/
 └── share
     └── info
 
-7 directories, 5 files
+8 directories, 5 files
 ```
 
 No other files are installed in any system folders or other locations.
