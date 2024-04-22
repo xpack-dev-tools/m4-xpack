@@ -62,7 +62,7 @@
       "m4": "./.content/bin/m4"
     },
     "devDependencies": {
-      "@xpack-dev-tools/xbb-helper": "^2.0.6"
+      "@xpack-dev-tools/xbb-helper": "^2.0.9"
     },
     "properties": {
       "appName": "GNU M4",
