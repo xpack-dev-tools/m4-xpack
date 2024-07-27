@@ -17,7 +17,7 @@ download_url: https://github.com/xpack-dev-tools/m4-xpack/releases/tag/v{{ XBB_R
 
 comments: true
 
-date:   {{ RELEASE_DATE }}
+date: {{ RELEASE_DATE }}
 
 # For Jekyll releases selection.
 categories:
