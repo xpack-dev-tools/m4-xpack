@@ -13,6 +13,10 @@
       "appName": "GNU M4",
       "appLcName": "m4",
       "platforms": "linux-x64,linux-arm64,linux-arm,darwin-x64,darwin-arm64",
+      "customFields": {
+        "programName": "m4",
+        "branding": "m4 (GNU M4) "
+      },
       "buildFolderRelativePath": "{{ 'build' | path_join: configuration.name | to_filename | downcase }}",
       "buildFolderRelativePathPosix": "{{ 'build' | path_posix_join: configuration.name | downcase }}",
       "commandBashBuild": "bash {{ properties.dbg }} scripts/build.sh --target {{ configuration.name }} --build-folder {{ properties.buildFolderRelativePathPosix }}",
