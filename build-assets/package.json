@@ -15,7 +15,9 @@
       "platforms": "linux-x64,linux-arm64,linux-arm,darwin-x64,darwin-arm64",
       "customFields": {
         "programName": "m4",
-        "branding": "m4 (GNU M4) "
+        "branding": "m4 (GNU M4) ",
+        "$link": "https://ftp.gnu.org/gnu/m4/",
+        "m4ReleaseDate": "28 May 2021"
       },
       "buildFolderRelativePath": "{{ 'build' | path_join: configuration.name | to_filename | downcase }}",
       "buildFolderRelativePathPosix": "{{ 'build' | path_posix_join: configuration.name | downcase }}",
