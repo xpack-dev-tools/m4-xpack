@@ -1,0 +1,24 @@
+
+import CodeBlock from '@theme/CodeBlock';
+
+import customField from '@site/src/libs/customField';
+
+{/* ------------------------------------------------------------------------ */}
+
+<CodeBlock language="console"> {
+`$ tree -L 2 ~/.local/xPacks/\@xpack-dev-tools/m4/${customField('version')}/.content/
+/home/ilg/.local/xPacks/\@xpack-dev-tools/m4/${customField('version')}/.content/
+├── README.md
+├── bin
+│   ├── gm4 -> m4
+│   └── m4
+├── distro-info
+│   └── licenses
+├── libexec
+│   ├── libiconv.so.2 -> libiconv.so.2.6.1
+│   └── libiconv.so.2.6.1
+└── share
+    └── info
+
+6 directories, 5 files
+`} </CodeBlock>
