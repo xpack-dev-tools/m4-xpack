@@ -42,7 +42,7 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout 
-      title={`Welcome to m4`}
+      title="Welcome!"
       description="A binary package with the m4 executables">
       <HomepageHeader />
       <main>
