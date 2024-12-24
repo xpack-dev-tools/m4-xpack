@@ -1,0 +1,7 @@
+Sitemap: https://xpack-dev-tools.github.io/m4-xpack/sitemap.xml
+
+User-agent: *
+Disallow: /m4-xpack/blog/archive/
+Disallow: /m4-xpack/blog/authors/
+Disallow: /m4-xpack/blog/page/
+Disallow: /m4-xpack/blog/tags/
