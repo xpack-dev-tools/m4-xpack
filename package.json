@@ -1,7 +1,7 @@
 {
   "name": "@xpack-dev-tools/m4",
   "version": "1.4.19-3.1",
-  "description": "A binary xPack with the GNU M4 executables",
+  "description": "A binary xpm package with the GNU M4 executables",
   "main": "",
   "scripts": {
     "postversion": "git push origin --all && git push origin --tags",
