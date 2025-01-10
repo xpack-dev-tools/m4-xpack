@@ -89,7 +89,8 @@ console.log('customFields: ' + util.inspect(customFields));
 // ----------------------------------------------------------------------------
 
 const config: Config = {
-  title: 'xPack GNU M4',
+  title: 'xPack GNU M4' +
+    ((process.env.DOCUSAURUS_IS_PREVIEW === 'true') ? ' (preview)' : ''),
   tagline: 'A binary distribution of GNU M4',
   // Explicitly set in headTags.
   // favicon: '/img/favicon.ico',
@@ -260,7 +261,7 @@ const config: Config = {
       items: [
         {
           to: '/',
-          // label: 'Home',
+          label: 'm4',
           className: 'header-home-link',
           position: 'left'
         },
