@@ -5,7 +5,7 @@
 
 # The xPack GNU M4
 
-A standalone, cross-platform (GNU/Linux, macOS) binary distribution of GNU M4,
+A standalone, cross-platform (macOS, GNU/Linux) binary distribution of GNU M4,
 intended for reproducible builds.
 
 ## Project documentation
