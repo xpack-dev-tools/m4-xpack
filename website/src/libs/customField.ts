@@ -12,8 +12,8 @@
  * be obtained from https://opensource.org/licenses/MIT/.
  */
 
-export default function HistoryRenameXpack(): JSX.Element {
-    return (
-        <>The project was renamed <b>xPack GNU M4</b></>
-    );
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+export default function customField(name: string): string {
+  return useDocusaurusContext().siteConfig.customFields[name];
 }
