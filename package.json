@@ -73,7 +73,8 @@
     "liquidjs": "^10.19.1"
   },
   "topConfig": {
-    "longName": "GNU M4"
+    "longName": "GNU M4",
+    "shortName": "m4"
   },
   "engines": {
     "node": " >=18.0.0"
