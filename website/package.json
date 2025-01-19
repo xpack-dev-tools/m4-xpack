@@ -56,7 +56,15 @@
       "last 5 safari version"
     ]
   },
-  "websiteConfig": {},
+  "websiteConfig": {
+    "customFields": {
+      "programName": "m4",
+      "branding": "m4 (GNU M4) ",
+      "$link": "https://ftp.gnu.org/gnu/m4/",
+      "m4ReleaseDate": "28 May 2021",
+      "isSecondaryTool": "true"
+    }
+  },
   "engines": {
     "node": ">=18.0"
   }
