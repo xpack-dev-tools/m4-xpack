@@ -34,7 +34,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
 
         <div className={styles.installWithCopy}>
-          <InstallWithCopy>xpm install @xpack-dev-tools/m4@{customField('releaseVersion')} --verbose</InstallWithCopy>
+          <InstallWithCopy>xpm install @xpack-dev-tools/m4@1.4.19-3.1 --verbose</InstallWithCopy>
         </div>
 
       </div>
