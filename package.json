@@ -52,10 +52,6 @@
           "fileName": "xpack-m4-1.4.19-3-linux-arm64.tar.gz",
           "sha256": "efffb0c84f80db1331781cf62b6698b68f359fa673ab9d700113e45e471b6ba3"
         },
-        "linux-arm": {
-          "fileName": "xpack-m4-1.4.19-3-linux-arm.tar.gz",
-          "sha256": "2be4d9ab2e5dbd8fe7b2ca4622ffb2b82a34c634b1f0aba827d3202a7be120ad"
-        },
         "linux-x64": {
           "fileName": "xpack-m4-1.4.19-3-linux-x64.tar.gz",
           "sha256": "cc91f42a22c500193419f98e6faae1333bb51c90e53374b28d0ba8149d065d63"
