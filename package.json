@@ -71,6 +71,7 @@
   "topConfig": {
     "descriptiveName": "GNU M4",
     "permalinkName": "m4",
+    "skipCiTests": "true",
     "useSelfHostedRunners": "true"
   },
   "engines": {
