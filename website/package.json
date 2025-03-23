@@ -76,7 +76,8 @@
     "branding": "m4 (GNU M4) ",
     "isSecondaryTool": "true",
     "$link": "https://ftp.gnu.org/gnu/m4/",
-    "m4ReleaseDate": "28 May 2021"
+    "m4ReleaseDate": "28 May 2021",
+    "shareOnTwitter": "true"
   },
   "engines": {
     "node": ">=18.0"
