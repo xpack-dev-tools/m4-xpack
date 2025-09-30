@@ -4,6 +4,13 @@ Entries in this file are in reverse chronological order.
 
 ## 2025-10-01
 
+* v1.4.20-1.1 published on npmjs.com
+* a0a4b80 package.json: update URLs for 1.4.20-1.1 release
+* d2e81b2 website: blog post release 1.4.20-1.1 published
+* 7b04121 package.json remove platform linux-arm
+* 79f7809 Revert "temporary publish-release.yml -x"
+* 991c4cc temporary publish-release.yml -x
+* 85e755d CHANGELOG update
 * v1.4.20-1 released
 * 4d14dfe package.json bump helper
 * 7862a66 package.json bump helper
