@@ -62,7 +62,10 @@
       "test-xpm": "bash {{properties.dbg}} scripts/test.sh --xpm",
       "build-native": "bash {{properties.dbg}} scripts/build.sh",
       "build-native-develop": "bash {{properties.dbg}} scripts/build.sh --development",
-      "build-native-develop-debug": "bash {{properties.dbg}} scripts/build.sh --development --debug"
+      "build-native-develop-debug": "bash {{properties.dbg}} scripts/build.sh --development --debug",
+      "trigger-workflow-build-win32-x64": "bash xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --workflow build-win32-x64.yml --xpm-version {{properties.xpm-version}} --loglevel {{properties.xpm-install-loglevel}}",
+      "build-native-win": "bash {{properties.dbg}} scripts/build.sh --windows",
+      "build-native-win-develop": "bash {{properties.dbg}} scripts/build.sh --development --windows"
     },
     "buildConfigurations": {
       "common-dependencies": {
@@ -193,6 +196,27 @@
         "properties": {
           "dockerImage": "ilegeul/ubuntu:arm32v7-18.04-xbb-v5.2.2",
           "force32": "linux32"
+        }
+      },
+      "win32-x64": {
+        "inherit": [
+          "common-dependencies",
+          "common-actions",
+          "common-docker"
+        ],
+        "devDependencies": {
+          "@xpack-dev-tools/gcc": "14.2.0-2.1",
+          "@xpack-dev-tools/mingw-w64-gcc": "14.2.0-1.1",
+          "@xpack-dev-tools/wine": "10.0.0-1.1"
+        },
+        "properties": {
+          "dockerImage": "ilegeul/debian:amd64-10-xbb-v6.0.0"
+        },
+        "actions": {
+          "build": "{{properties.commandBashBuild}} --windows",
+          "build-development": "{{properties.commandBashBuild}} --windows --development",
+          "build-development-debug": "{{properties.commandBashBuild}} --windows --development --debug",
+          "build-development-tests-only": "{{properties.commandBashBuild}} --windows --development --tests-only"
         }
       }
     }

@@ -19,7 +19,36 @@ function application_build_versioned_components()
   XBB_M4_VERSION="$(xbb_strip_version_pre_release "${XBB_RELEASE_VERSION}")"
 
   # Keep them in sync with the combo archive content.
-  if [[ "${XBB_RELEASE_VERSION}" =~ 1[.]4[.]19-.* ]]
+  if [[ "${XBB_RELEASE_VERSION}" =~ 1[.]4[.]20-.* ]]
+  then
+    # -------------------------------------------------------------------------
+    # Build the native dependencies.
+
+    # None
+
+    # -------------------------------------------------------------------------
+    # Build the target dependencies.
+
+    xbb_reset_env
+    # Before set target (to possibly update CC & co variables).
+    # xbb_activate_installed_bin
+
+    xbb_set_target "requested"
+
+    # https://ftp.gnu.org/pub/gnu/libiconv/
+    libiconv_build "1.18"
+
+    # -------------------------------------------------------------------------
+    # Build the application binaries.
+
+    xbb_set_executables_install_path "${XBB_APPLICATION_INSTALL_FOLDER_PATH}"
+    xbb_set_libraries_install_path "${XBB_DEPENDENCIES_INSTALL_FOLDER_PATH}"
+
+    # https://ftp.gnu.org/gnu/m4/
+    m4_build "${XBB_M4_VERSION}"
+
+    # -------------------------------------------------------------------------
+  elif [[ "${XBB_RELEASE_VERSION}" =~ 1[.]4[.]19-.* ]]
   then
     # -------------------------------------------------------------------------
     # Build the native dependencies.

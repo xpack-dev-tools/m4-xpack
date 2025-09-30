@@ -17,11 +17,11 @@ For information on how to install and use this project, please refer to the
 ## Project source
 
 The source code of the current release is available on
-[GitHub tag v1.4.19-3.1 tree](https://github.com/xpack-dev-tools/m4-xpack/tree/v1.4.19-3.1).
+[GitHub tag v1.4.20-1.1 tree](https://github.com/xpack-dev-tools/m4-xpack/tree/v1.4.20-1.1).
 
 ## License
 
 Unless otherwise stated, the original content is released under the terms of the
-[MIT License](https://opensource.org/licenses/MIT),
+[MIT License](https://opensource.org/licenses/mit),
 with all rights reserved to
 [Liviu Ionescu](https://github.com/ilg-ul).
