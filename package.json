@@ -55,10 +55,6 @@
         "linux-x64": {
           "fileName": "xpack-m4-1.4.19-3-linux-x64.tar.gz",
           "sha256": "cc91f42a22c500193419f98e6faae1333bb51c90e53374b28d0ba8149d065d63"
-        },
-        "win32-x64": {
-          "fileName": "xpack-m4-1.4.19-3-win32-x64.zip",
-          "sha256": "0b2d496b383ba578182eb57b3f7d35ff510e36eda56257883b902fa07c3bba55"
         }
       }
     },
