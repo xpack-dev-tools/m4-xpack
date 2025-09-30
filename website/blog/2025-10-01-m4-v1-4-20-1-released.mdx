@@ -1,14 +1,14 @@
 ---
 
-title: xPack {{packageConfig.descriptiveName}} v{{xpackVersion}} released
-seo_title: Version {{xpackVersion}} released
-description: Version {{xpackVersion}} is a TODO new/maintenance release.
+title: xPack xPack GNU M4 v1.4.20-1 released
+seo_title: Version 1.4.20-1 released
+description: Version 1.4.20-1 is a new release.
 keywords:
   - xpack
-  - {{packageConfig.permalinkName}}
+  - m4
   - release
 
-date: {{releaseDate}}
+date: 2025-10-01 02:42:47 +0300
 
 authors: ilg-ul
 
@@ -18,13 +18,13 @@ tags:
 
 # ----- Custom properties -----------------------------------------------------
 
-m4_version: "{{upstreamVersion}}"
-m4_release_date: "{{packageWebsiteConfig.m4ReleaseDate}}"
+m4_version: "1.4.20"
+m4_release_date: "10 May 2025"
 
-version: "{{xpackVersion}}"
+version: "1.4.20-1"
 npm_subversion: "1"
 
-download_url: https://github.com/xpack-dev-tools/m4-xpack/releases/tag/v{{xpackVersion}}/
+download_url: https://github.com/xpack-dev-tools/m4-xpack/releases/tag/v1.4.20-1/
 
 ---
 
@@ -36,11 +36,7 @@ import Prerequisites from './_common/_prerequisites-glib-2.28.mdx';
 import DeprecationNotices from './_common/_deprecation-notices-glib-2.28.mdx';
 import DownloadAnalytics from './_common/_download-analytics.mdx';
 
-TODO: select one summary
-
-Version **{{releaseVersion}}** is a maintenance release; it fixes ...
-
-Version **{{releaseVersion}}** is a new release; it follows the upstream release.
+Version **1.4.20-1.1** is a new release; it follows the upstream release.
 
 <!-- truncate -->
 
@@ -73,10 +69,10 @@ The binary files are available from <a href={frontMatter.download_url}>GitHub Re
 The easiest way to install this specific version, is by using **xpm**:
 
 <CodeBlock language="console"> {
-`xpm install @xpack-dev-tools/{{packageConfig.permalinkName}}@${frontMatter.version}.${frontMatter.npm_subversion} -verbose
+`xpm install @xpack-dev-tools/m4@${frontMatter.version}.${frontMatter.npm_subversion} -verbose
 `} </CodeBlock>
 
-Comprehensive instructions for installing **xPack {{packageConfig.descriptiveName}}** on different platforms
+Comprehensive instructions for installing **xPack xPack GNU M4** on different platforms
 can be found in the [Install Guide](/docs/install/).
 
 ## Compliance
@@ -138,3 +134,22 @@ TBD
 ## Checksums
 
 The SHA-256 hashes for the files are:
+
+```txt
+eec5cca7634e7ea463f044fb3d233a472de62932f1889f12fd8ca06ba5b7609e
+xpack-m4-1.4.20-1-darwin-arm64.tar.gz
+
+1329aa4237a933fe7f63e0c5922ea271a79a7d56ab7e1424f77f949f838777b5
+xpack-m4-1.4.20-1-darwin-x64.tar.gz
+
+bc5fa98051abab8a8410499d89065c3554be7c1ca0574e85367a14d0764cfdfb
+xpack-m4-1.4.20-1-linux-arm64.tar.gz
+
+f593eeefafc59f33c323ce350b50e91f7c58917abef3320c3b118facbf370725
+xpack-m4-1.4.20-1-linux-x64.tar.gz
+
+```
+
+<DeprecationNotices/>
+
+<DownloadAnalytics version={frontMatter.version}/>
