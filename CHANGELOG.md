@@ -4,6 +4,15 @@ Entries in this file are in reverse chronological order.
 
 ## 2025-10-01
 
+* v1.4.20-1 released
+* 4d14dfe package.json bump helper
+* 7862a66 package.json bump helper
+* c0baba6 package.json bump helper
+* 5aba271 workflows update test-docker-linux*
+* b3e5e23 package.json bump helper
+* 2132b92 package.json update
+* e62322a website update
+* 90efde3 CHANGELOG update
 * 3a008c9 website update
 * 09a7b42 website update
 
