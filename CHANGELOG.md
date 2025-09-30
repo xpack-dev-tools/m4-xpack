@@ -2,8 +2,18 @@
 
 Entries in this file are in reverse chronological order.
 
+## 2025-10-01
+
+* 3a008c9 website update
+* 09a7b42 website update
+
 ## 2025-09-30
 
+* e9e2c12 package.json remove win32
+* 48d8950 website update
+* a5e8086 workflows remove win32
+* 0abf25d prepare v1.4.20-1
+* 88405f8 workflows update
 * v1.4.20-1 prepared
 * 9726803 .*ignore update
 * 1f62c7f website: re-generate commons
