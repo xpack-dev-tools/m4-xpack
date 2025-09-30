@@ -23,6 +23,7 @@ To update the build scripts and build the development binaries:
 
 <CodeBlock language="sh"> {
 `export XBB_ENVIRONMENT_MACOSX_DEPLOYMENT_TARGET='11.0' && \\
+rm -rf ~/Work/xpack-dev-tools/m4-xpack.git/package-lock.json && \\
 rm -rf ~/Work/xpack-dev-tools/m4-xpack.git/build-assets/package-lock.json && \\
 git -C ~/Work/xpack-dev-tools/m4-xpack.git pull && \\
 xpm run install -C ~/Work/xpack-dev-tools/m4-xpack.git/build-assets && \\
@@ -47,6 +48,7 @@ To update the build scripts and build the release binaries:
 <CodeBlock language="sh"> {
 `export XBB_ENVIRONMENT_MACOSX_DEPLOYMENT_TARGET='11.0' && \\
 rm -rf ~/Work/xpack-dev-tools/m4-xpack.git/package-lock.json && \\
+rm -rf ~/Work/xpack-dev-tools/m4-xpack.git/build-assets/package-lock.json && \\
 git -C ~/Work/xpack-dev-tools/m4-xpack.git pull && \\
 xpm run install -C ~/Work/xpack-dev-tools/m4-xpack.git/build-assets && \\
 \\
