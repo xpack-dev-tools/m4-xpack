@@ -337,49 +337,6 @@ to `"@xpack-dev-tools/xbb-helper":`.
 
 <CommonGenerateTopCommons />
 
-### Check for disk space
-
-Verify that the build machines have sufficient free space and perform
-cleanup operations as necessary:
-
-```sh
-xpm run check-space -C ~/Work/xpack-dev-tools/m4-xpack.git/build-assets
-```
-
-This is equivalent to executing a `df` command.
-
-<Tabs groupId="operating-systems">
-
-<TabItem value="macos" label="macOS">
-
-```
-df -gH /
-```
-
-</TabItem>
-
-<TabItem value="linux" label="GNU/Linux">
-
-```sh
-df -BG -H /
-```
-
-</TabItem>
-
-</Tabs>
-
-To free the space utilised by all previous builds of all `xpack-dev-tools` packages:
-
-```sh
-xpm run clear-all-projects-builds -C ~/Work/xpack-dev-tools/m4-xpack.git/build-assets
-```
-
-This is equivalent to executing a comprehensive `rm` to remove the `build` folders:
-
-```sh
-rm -rf ~/Work/xpack-dev-tools/*/build-assets/build
-```
-
 ### Commit and push
 
 - **Push** the `xpack-development` branch to GitHub
@@ -405,7 +362,7 @@ To trigger the GitHub Actions builds, utilise the xpm actions:
 - **trigger-workflow-build-darwin-arm64**
 - **trigger-workflow-build-linux-x64**
 - **trigger-workflow-build-linux-arm64**
-```
+
 
 The scripts behind these actions require the `GITHUB_API_DISPATCH_TOKEN`
 variable to be present
