@@ -259,7 +259,7 @@ caffeinate ssh ampere
 
 ### Update the durations of the development builds
 
-In `website/docs/_shared/_development-durations.mdx`, update
+In `website/docs/_project/_development-durations.mdx`, update
 the durations of the builds.
 
 Commit with the message _**website: update development durations**_.
@@ -269,15 +269,15 @@ Commit with the message _**website: update development durations**_.
 Copy the trees displayed at the end of the test builds and paste to the
 **Folder hierarchy** section within the web file:
 
-- `website/docs/_shared/_folders-hierarchies-linux.mdx`
-- `website/docs/_shared/_folders-hierarchies-macos.mdx`
+- `website/docs/_project/_folders-hierarchies-linux.mdx`
+- `website/docs/_project/_folders-hierarchies-macos.mdx`
 
 
 If present, replace the actual version
-(such as **1.4.20**) with the following expression:
+(such as **1.4.20-1.1**) with the following expression:
 
 ```txt
-${customField('upstreamVersion')}
+${customField('releaseVersion')}
 ```
 
 :::tip
@@ -324,76 +324,7 @@ place them in the XBB cache (`Work/cache`) and restart the build.
 
 ## Execute the production builds
 
-The automation is provided by GitHub Actions and three self-hosted runners.
-
-### Start the self-hosted runners
-
-If the runners have expired (more than 2 weeks since last use), execute the
-`github-runner-configure.sh` script to reconfigure them. This script
-is available in the `xbb-helper` and
-requires `GITHUB_API_XPACK_DEV_TOOLS_RUNNERS_TOKEN` to be present.
-
-- On the development machine (`wksi`) open
-SSH sessions to the build machines (`xbbmi`, `xbbma`, `xbbli`, `ampere`):
-
-```sh
-caffeinate ssh xbbmi
-caffeinate ssh xbbma
-caffeinate ssh xbbli
-caffeinate ssh ampere
-```
-
-Create a `screen` session, to provide a persistent standard output for
-the runners:
-
-```sh
-screen -S ga
-```
-
-To exit it, use `# Ctrl-a Ctrl-d`.
-
-For `xbbli` & `ampere`, which have additional memory, start two runners:
-
-```sh
-~/actions-runners/xpack-dev-tools/1/run.sh &
-~/actions-runners/xpack-dev-tools/2/run.sh &
-```
-
-For the macOS x64 runners, ensure the deployment target is defined:
-
-```sh
-unset WORK_FOLDER_PATH
-export XBB_ENVIRONMENT_MACOSX_DEPLOYMENT_TARGET="11.0"
-~/actions-runners/xpack-dev-tools/run.sh &
-```
-
-```sh
-unset WORK_FOLDER_PATH
-export XBB_ENVIRONMENT_MACOSX_DEPLOYMENT_TARGET="11.0"
-~/actions-runners/xpack-dev-tools/run.sh &
-```
-
-On all other machines, start the runner with:
-
-```sh
-~/actions-runners/xpack-dev-tools/run.sh &
-```
-
-To check the status of the runners locally:
-
-```sh
-ps -a | grep 'Runner.Listener'
-```
-
-To terminate them:
-
-```sh
-killall Runner.Listener
-```
-
-### Check the status of the runners
-
-The status of all self-hosted runners is available at the [GitHub Runners](https://github.com/organizations/xpack-dev-tools/settings/actions/runners) page.
+The automation is provided by GitHub Actions.
 
 ### Publish the helper
 
@@ -492,7 +423,7 @@ These commands utilise the `xpack-development` branch of this repository.
 The workflow results and logs are available from the
 [GitHub Actions](https://github.com/xpack-dev-tools/m4-xpack/actions) page.
 
-Update the values in `website/docs/_shared/_github-actions-durations.mdx`
+Update the values in `website/docs/_project/_github-actions-durations.mdx`
 with those shown by GitHub Actions.
 
 Commit with the message _**website: update actions durations**_.
