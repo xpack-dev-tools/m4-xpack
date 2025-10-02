@@ -68,7 +68,7 @@ xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git
 ## Release schedule
 
 The xPack GNU M4 release schedule generally follows the original GNU
-[releases](https://ftp.gnu.org/gnu/m4/).
+[releases](https://ftpmirror.gnu.org/gnu/m4/).
 
 ## How to make new releases
 
@@ -100,7 +100,7 @@ update the dependencies in `package.json`.
 
 ### Check the latest upstream release
 
-Check the GNU M4 [releases](https://ftp.gnu.org/gnu/m4/)
+Check the GNU M4 [releases](https://ftpmirror.gnu.org/gnu/m4/)
 and compare the the xPack [Releases](https://github.com/xpack-dev-tools/m4-xpack/releases/).
 
 ### Increase the version
@@ -630,7 +630,7 @@ In the `xpack/web-jekyll` GitHub repo:
 - select the `develop` branch
 - copy the new file to `_posts/releases/m4`
 - update version and date from last
-[release](https://ftp.gnu.org/gnu/m4/).
+[release](https://ftpmirror.gnu.org/gnu/m4/).
 
 If any, refer to closed
 [issues](https://github.com/xpack-dev-tools/m4-xpack/issues/).

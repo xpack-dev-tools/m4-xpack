@@ -4,7 +4,7 @@ TODO: select one
 
 Version **{{releaseVersion}}** is a maintenance release of the **xPack GNU M4** package; it fixes ...
 
-Version **{{releaseVersion}}** is a new release of the **xPack GNU M4** package, following the upstream GNU M4 [release](https://ftp.gnu.org/gnu/m4/).
+Version **{{releaseVersion}}** is a new release of the **xPack GNU M4** package, following the upstream GNU M4 [release](https://ftpmirror.gnu.org/gnu/m4/).
 
 [Continue reading »](will-be-updated-shortly)
 

@@ -44,7 +44,7 @@ function application_build_versioned_components()
     xbb_set_executables_install_path "${XBB_APPLICATION_INSTALL_FOLDER_PATH}"
     xbb_set_libraries_install_path "${XBB_DEPENDENCIES_INSTALL_FOLDER_PATH}"
 
-    # https://ftp.gnu.org/gnu/m4/
+    # https://ftpmirror.gnu.org/gnu/m4/
     m4_build "${XBB_M4_VERSION}"
 
     # -------------------------------------------------------------------------
@@ -73,7 +73,7 @@ function application_build_versioned_components()
     xbb_set_executables_install_path "${XBB_APPLICATION_INSTALL_FOLDER_PATH}"
     xbb_set_libraries_install_path "${XBB_DEPENDENCIES_INSTALL_FOLDER_PATH}"
 
-    # https://ftp.gnu.org/gnu/m4/
+    # https://ftpmirror.gnu.org/gnu/m4/
     m4_build "${XBB_M4_VERSION}"
 
     # -------------------------------------------------------------------------
