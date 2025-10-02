@@ -77,7 +77,7 @@
     "branding": "m4 (GNU M4) ",
     "$tagline": "A binary distribution of GNU M4",
     "isSecondaryTool": "true",
-    "$link": "https://ftp.gnu.org/gnu/m4/",
+    "$link": "https://ftpmirror.gnu.org/gnu/m4/",
     "m4ReleaseDate": "10 May 2025",
     "shareOnTwitter": "true"
   },
