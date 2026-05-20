@@ -1,0 +1,8 @@
+{
+  "descriptiveName": "xPack GNU M4",
+  "permalinkName": "m4",
+  "preferredName": "xPack GNU M4",
+  "upstreamDescriptiveName": "GNU M4",
+  "skipCiTests": true,
+  "useSelfHostedRunners": false
+}
